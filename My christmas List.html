@@ -23,7 +23,22 @@
       border-radius: 10px;
       animation: slideDown 1.5s ease-in-out;
     }
+    
+    h2 {
+      font-family: 'Courier New', Courier, monospace;
+      color: #fff;
+      background-color: #1d3557;
+      padding: 10px;
+      border-radius: 10px;
+      animation: slideDown 1.5s ease-in-out;
+    }
 
+    a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
     .image-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -121,7 +136,7 @@
     <img src="images.png" alt="Image 16">
     <img src="images-removebg-preview.png" alt="Image 17">
   </div>
-
+  <h2><a href="https://bobreed24.github.io/graphic-design/How To Wrap A Present.html">🎁 How to wrap a present 🎄</h2>
   <div class="lightbox" id="lightbox">
     <button class="lightbox-close" onclick="closeLightbox()">×</button>
     <img src="" alt="Lightbox Image" id="lightbox-image">
@@ -131,7 +146,7 @@
     const greeting = document.getElementById('greeting');
     const hours = new Date().getHours();
     if (hours < 12) {
-      greeting.textContent = "Good whatever time it is! Here's my Christmas list!";
+      greeting.textContent = "Good Morning! Here's my Christmas list!";
     } else if (hours < 18) {
       greeting.textContent = "Good Afternoon! Ready to spread Christmas cheer?";
     } else {
