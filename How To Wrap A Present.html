@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How To Wrap A Present</title>
+  <link rel="stylesheet" href="https://unpkg.com/pico.css" />
+  <style>
+    body {
+      font-size: 1.25rem;
+      background: linear-gradient(to bottom, #FFEBE8, #FFD6F0);
+      font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans', Verdana, sans-serif;
+      color: #333;
+      text-align: center;
+      padding: 20px;
+    }
+
+    a {
+      text-decoration: none;
+      color: #FF679F;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #FF0004;
+    }
+
+    h1, h2, h3 {
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    h1 {
+      color: #FF679F;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    h2, h3 {
+      color: #333;
+      margin-top: 30px;
+    }
+
+    p, ol, ul {
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    ol li, ul li {
+      font-size: 1.2rem;
+      margin: 10px 0;
+      cursor: pointer;
+      transition: transform 0.2s, color 0.2s;
+    }
+
+    ol li:hover, ul li:hover {
+      transform: scale(1.05);
+      color: #FF679F;
+    }
+
+    img {
+      display: block;
+      margin: 20px auto;
+      max-width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    .button-container {
+      margin: 20px 0;
+    }
+
+    button {
+      background-color: #FF679F;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #FF0004;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>🎁 How To Wrap A Present 🎄</h1>
+  <p><a href="HappyHs.html">Want to go back? Click Here</a></p>
+
+  <div class="button-container">
+    <button onclick="toggleSection('steps')">Show Steps</button>
+    <button onclick="toggleSection('supplies')">Show Supplies</button>
+  </div>
+
+  <div id="steps" style="display: none;">
+    <h2>Step-by-Step Instructions</h2>
+    <ol>
+      <li>Grab a box</li>
+      <li>Grab wrapping paper and tape</li>
+      <li>Wrap the paper around the present</li>
+      <li>Write "I hate you" on it</li>
+      <li>Add a piece of coal</li>
+    </ol>
+  </div>
+
+  <div id="supplies" style="display: none;">
+    <h3>Supplies Needed</h3>
+    <ul>
+      <li>A box</li>
+      <li>Coal</li>
+      <li>Tape</li>
+      <li>Super Glue</li>
+      <li>Wrapping paper</li>
+    </ul>
+  </div>
+
+  <h3>Images</h3>
+  <img src="Block_of_Coal_JE3_BE2-removebg-preview.png" alt="Block of Coal" width="300" height="300">
+  <img src="oh-boy-squidiot-box-removebg-preview.png" alt="Squidiot Box" width="498" height="281">
+  <img src="81P5VD-Jw3L.jpg" alt="Present Image" width="223" height="240">
+
+  <script>
+    function toggleSection(sectionId) {
+      const sections = ['steps', 'supplies'];
+      sections.forEach(id => {
+        const section = document.getElementById(id);
+        section.style.display = id === sectionId && section.style.display === 'none' ? 'block' : 'none';
+      });
+    }
+  </script>
+</body>
+</html>
